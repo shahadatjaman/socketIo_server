@@ -115,9 +115,6 @@ io.on("connection", (socket) => {
 app.get("/", (req, res) => {
   res.send("Welcome");
 });
-app.post("/", (req, res) => {
-  res.send("Welcome");
-});
 
 server.listen(process.env.PORT || 8080, {
   cors: {
