@@ -112,12 +112,9 @@ io.on("connection", (socket) => {
   });
 });
 
-if (process.env.NODE_ENV === "production") {
-  // app.use(express.static("client/build"));
-  app.get("*", (req, res) => {
-    res.send("Welcome");
-  });
-}
+app.get("*", (req, res) => {
+  res.send("Welcome");
+});
 
 server.listen(process.env.PORT || 8080, {
   cors: {
